@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            background-color: rgb(197, 221, 221);
+            display: flex;
+            width: 45%;
+            height: 85vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1rem;
+            border-radius: 10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        input{
+            border-radius: 7px;
+            border: none;
+            padding: 9px 0px;
+            width: 40%;
+            border-bottom: 2px solid rgb(65, 64, 64);
+            border-right: 2px solid rgb(65, 64, 64);
+        }
+        .btn{
+            background-color: aqua;
+            border: 1px solid blue;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #333;
+            transition: background-color 0.3s ease-in;
+        }
+        .btn:hover{
+            background-color: rgb(112, 112, 228)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Table of any number</h1>
+        <input type="text" aria-label="for" placeholder="Enter any number" id="t1">
+        <button class="btn" onclick="table()">Display table</button>
+        <p id="p1"></p>
+    </div>
+    <script>
+        function table() {
+            let n = Number(document.getElementById('t1').value);
+            let ans = '';
+            for (i = 1; i <= 10; i++) {
+                ans = ans + `${n} X ${i} = ${n * i} <br>`;
+            }
+            document.getElementById("p1").innerHTML = ans;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even/Odd program</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif
+        }
+        body{
+            background-color: #b591dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .container{
+            border-radius: 10%;
+            display: flex;
+            height: 550px;
+            width: 650px;
+            /* width: 370px; */
+            margin: 0 ;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* margin: 50px; */
+            /* height: 100vh; */
+            /* width: 30vw; */
+            background-color: pink;
+            row-gap: 1rem;
+        }
+
+        .heading {
+           font-weight: 700;
+
+            
+        }
+        input{
+            padding: 9px 0px;
+            width: 40%;
+            border-radius: 10px;
+            border: none;
+            border-bottom: 2px solid rgb(65, 64, 64);
+            border-right: 2px solid rgb(65, 64, 64);
+
+            background: none;
+            color: black;
+            outline: none;
+        }
+        ::placeholder{
+            color: rgb(24, 23, 23);
+        }
+        .btn{
+            background-color: aqua;
+            border: 1px solid blue;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #333;
+            transition: background-color 0.3s ease-in;
+        }
+        .btn:hover{
+            background-color: rgb(112, 112, 228)
+        }
+        #ans{
+            font-weight: 900;
+            font-size: 1.3rem;
+            word-spacing: 3px;
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    
+    <div class="container"  >
+        <h2 class="heading"> Wap to check if number is Even Or Odd</h2>
+        <input class="form-control" type="text" placeholder="Enter your number" id="num">
+        <button class="btn" onclick="check()">check</button>
+        <h3 id="ans">Your answer is=></h3>
+    </div>
+    <script>
+        function check() {
+            let n = document.getElementById('num').value
+            if (n.trim() === ""){
+                document.getElementById('ans').innerHTML = "Enter Number...";
+                var answer1= document.getElementById("ans");
+                answer1.style.color="black"
+
+            }
+            else if (n % 2 == 0) {
+                document.getElementById('ans').innerHTML = "Your answer is even";
+                var answer1= document.getElementById("ans");
+                answer1.style.color="green"
+                // document.getElementById('ans').innerHTML.setAttribute('style', 'color:green')
+            }
+            else {
+                document.getElementById('ans').innerHTML = "Your answer is odd";
+                var answer1= document.getElementById("ans");
+                answer1.style.color="red"
+                // document.getElementById('ans').setAttribute('style', 'color:red')
+
+            }
+
+        }
+    </script>
+     
+</body>
+
+</html>

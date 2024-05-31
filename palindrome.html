@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Palindrome</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif
+        }
+        .container{
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* margin: 0 auto; */
+            width: 60%;
+            height: 80vh;
+            background-color: rgb(152, 206, 215);
+            row-gap: 1rem;
+        }
+        .flex{
+            background-color: #b591dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .input{
+            border-radius: 7px;
+            border: none;
+            padding: 9px 0px;
+            width: 60%;
+            border-bottom: 2px solid rgb(65, 64, 64);
+            border-right: 2px solid rgb(65, 64, 64);
+        }
+        .btn{
+            background-color: aqua;
+            border: 1px solid blue;
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #333;
+            transition: background-color 0.3s ease-in;
+        }
+        .btn:hover{
+            background-color: rgb(112, 112, 228)
+        }
+       
+
+    </style>
+</head>
+<body>
+    <body class="flex">
+        <div class="container">
+            <h2>WAP for checking number is Palindrome or not <span>&gt;&gt;</span></h2>
+            <div class="child_container">
+                <input class="input" type="number" placeholder="Enter the Number..." id="num" fdprocessedid="ng5pd">
+                <input type="submit" class="btn" onclick="call()" value="Submit" fdprocessedid="ov6418a">
+                <p id="pera"></p>
+            </div>
+        </div>
+    
+        <script>
+            const val = document.getElementById("num")
+            const pera = document.getElementById("pera") 
+            const call = () => {
+                n = parseInt(val.value);
+                a = n;
+                let s = 0;
+                while (n > 0) {
+                    r = n % 10;
+                    s = (s * 10) + r;
+                    n = parseInt(n / 10);
+                }
+                if(a==s){
+                    pera.innerHTML = "Palindrome Number";
+                }
+                else{
+                    pera.innerHTML = "Not Palindrome Number";
+                }
+                console.log(s)
+            }
+            </script><div id="speechify-global-notifications"></div><div id="speechify-selection-mode" style="position: fixed; top: 0px; right: 0px; width: 100%; min-height: 100%; z-index: 2147483640; display: none; pointer-events: auto;"></div><div id="speechify-screenshot-mode" style="position: fixed; top: 0px; right: 0px; width: 100%; min-height: 100%; z-index: 2147483640; display: none !important;"></div><div id="speechify-shortcuts-prompt"></div>
+    
+    <span id="PING_CONTENT_AUTOPLAY_DETECTION" style="display: none;"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body>
+</body>
+</html>
